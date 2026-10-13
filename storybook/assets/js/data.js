@@ -24,6 +24,7 @@ window.CH = [
   { id: "voice", n: "8", t: "Voice", glyph: "quill", pages: [["8.1", "How Crossword speaks"], ["8.2", "Words & mechanics"]] },
   { id: "in-action", n: "9", t: "Crossword in action", glyph: "chat", pages: [["9.1", "The website"]] },
   { id: "resources", n: "10", t: "Resources", glyph: "book", pages: [["10.1", "Design files"], ["10.2", "Downloads"], ["10.3", "Email templates"], ["10.4", "Email signature"], ["10.5", "Textures & patterns"], ["10.6", "Design tokens"], ["10.7", "For AI tools"], ["10.8", "Prompt starters"]] },
+  { id: "web-kit", n: "11", t: "Web kit", glyph: "gear", pages: [["11.1", "Using the kit"], ["11.2", "Hero"], ["11.3", "Feature"], ["11.4", "Showcase"], ["11.5", "Livery"], ["11.6", "Proof"], ["11.7", "Process"], ["11.8", "Cards"], ["11.9", "Conversion"], ["11.10", "Long-form"], ["11.11", "Closing"], ["11.12", "Page templates"]] },
 ];
 
 window.COLOURS = {

@@ -14,7 +14,7 @@ const fmtColor = hex => { const rgb = hexToRgb(hex); if (fmt === "rgb") return `
 const lum = hex => hexToRgb(hex).map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }).reduce((a, v, i) => a + v * [.2126, .7152, .0722][i], 0);
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
 const isLight = hex => lum(hex) > .35;
-const AV = "?v=20261013a"; /* bump when screens or textures change, so caches refresh */
+const AV = "?v=20261013b"; /* bump when screens or textures change, so caches refresh */
 const pad2 = n => String(n).padStart(2, "0");
 const swash = s => `<span class="sw">${esc(s[0])}</span>${esc(s.slice(1))}`;
 
@@ -97,7 +97,7 @@ function renderHome(ch) {
       </div>
       <div class="btnrow" style="margin-top:32px">${stampA("Start with the logo", "#/logo")}${dlBtn("kit", "Download all assets")}</div></div>
   </div></section>
-  ${gpOpen("1.2", ch)}<div class="gp-grid"><div class="gp-copy">${eyebrow("Index")}<h2 style="margin-top:20px">${swash("Contents")}</h2><p>Ten chapters, numbered as in the Figma guideline. Components, Motion and Voice come from the shipped website.</p></div><div class="toc">${toc}</div></div></section>`;
+  ${gpOpen("1.2", ch)}<div class="gp-grid"><div class="gp-copy">${eyebrow("Index")}<h2 style="margin-top:20px">${swash("Contents")}</h2><p>Eleven chapters, numbered as in the Figma guideline. Components, Motion and Voice come from the shipped website; the Web kit turns the Figma layout library into responsive code.</p></div><div class="toc">${toc}</div></div></section>`;
 }
 
 /* ======================================================================
@@ -466,7 +466,8 @@ function renderResources(ch) {
 /* ======================================================================
    router & shell
    ====================================================================== */
-const RENDER = { home: renderHome, logo: renderLogo, colour: renderColour, typography: renderType, "graphic-system": renderGraphic, components: renderComponents, motion: renderMotion, voice: renderVoice, "in-action": renderAction, resources: renderResources };
+const WK = typeof window.WEBKIT === "function" ? window.WEBKIT({ esc, swash, eyebrow, ICON, studs, glyphSvg, svgOf, nf, gpOpen, divider, copyCol, copyText, btn, saveFile, fetchBlob, envelopeHTML, toast }) : null;
+const RENDER = { "web-kit": ch => WK.render(ch), home: renderHome, logo: renderLogo, colour: renderColour, typography: renderType, "graphic-system": renderGraphic, components: renderComponents, motion: renderMotion, voice: renderVoice, "in-action": renderAction, resources: renderResources };
 let current = null, spy = null, tabTimer = null;
 
 function buildNav(chId) {
@@ -488,7 +489,7 @@ function route() {
   if (sub) { const el = document.getElementById("p-" + sub); if (el) requestAnimationFrame(() => el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" })); }
   closeMenu();
 }
-function cleanup() { if (spy) spy.disconnect(); clearTimeout(tabTimer); if (window.__env) { window.__env.kill(); window.__env = null; } if (window.__tabsIO) { window.__tabsIO.disconnect(); window.__tabsIO = null; } }
+function cleanup() { if (WK) WK.cleanup(); if (spy) spy.disconnect(); clearTimeout(tabTimer); if (window.__env) { window.__env.kill(); window.__env = null; } if (window.__tabsIO) { window.__tabsIO.disconnect(); window.__tabsIO = null; } }
 function afterRender(id) {
   spy = new IntersectionObserver(es => { for (const e of es) if (e.isIntersecting) { const k = e.target.dataset.sub; $$("[data-subnav]").forEach(a => a.setAttribute("aria-current", a.dataset.subnav === k)); } }, { rootMargin: "-20% 0px -70% 0px" });
   $$(".gp").forEach(s => spy.observe(s));
@@ -496,6 +497,7 @@ function afterRender(id) {
   if (id === "components") initTabs();
   if (id === "motion") initEnvelope();
   if (id === "resources") { renderEmail(); renderSig(); }
+  if (id === "web-kit" && WK) WK.init();
 }
 
 /* ---------- swash lab ---------- */

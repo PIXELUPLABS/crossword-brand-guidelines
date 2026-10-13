@@ -22,6 +22,7 @@ The Crossword brand guidelines as a static site, built by PIXELUP. It mirrors th
 | 8 Voice | How Crossword speaks, terminology, and the copy mechanics read from the shipped site |
 | 9 Crossword in action | The final website designs from Figma (Hero Tests): every section of page A, the handoff panel and the three hero directions, with a lightbox |
 | 10 Resources | Design files, Downloads (ZIPs built in the browser), Email templates, the Email signature builder, Textures & patterns, Design tokens, For AI tools, Prompt starters |
+| 11 Web kit | The Figma layout library as responsive HTML and CSS: 37 sections in ten groups (Hero, Feature, Showcase, Livery, Proof, Process, Cards, Conversion, Long-form, Closing), each previewable at desktop, tablet and phone width with Copy HTML, plus four page templates. Built on the staging site's tokens and breakpoints. |
 
 ## Files
 
@@ -32,6 +33,7 @@ The Crossword brand guidelines as a static site, built by PIXELUP. It mirrors th
 | `assets/css/site.css` | All styles. Tokens come from `DESIGN.md`; brand colours never change with the theme (auto, light or dark). |
 | `assets/js/data.js` | Content: chapters, palette, type ladder, contrast pairs, voice, email templates, prompts. |
 | `assets/js/app.js` | The router, the chapter renderers and all the interactions. |
+| `assets/js/webkit.js`, `assets/css/webkit.css` | The Web kit chapter: every layout's markup and behaviour, and its stylesheet. Previews respond to their own width through container queries (`@container wk`); on the website, use the same rules as `@media` queries. |
 | `assets/js/generated.js` | Embedded logo paths, `DESIGN.md`, `brand.md`, tokens and badge glyphs, so the site also works offline. Rebuild it with `python tools/build_generated.py` after editing the kit. |
 | `assets/brand/` | `DESIGN.md`, `brand.md` and the token files from the brand kit. |
 | `assets/figma/` | Website screens (WebP previews, thumbnails, and full-resolution PNGs in `full/`), postage stamps and wax seals, all rendered from Figma. |
