@@ -14,7 +14,7 @@ const fmtColor = hex => { const rgb = hexToRgb(hex); if (fmt === "rgb") return `
 const lum = hex => hexToRgb(hex).map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }).reduce((a, v, i) => a + v * [.2126, .7152, .0722][i], 0);
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
 const isLight = hex => lum(hex) > .35;
-const AV = "?v=20261012c"; /* bump when screens or textures change, so caches refresh */
+const AV = "?v=20261013a"; /* bump when screens or textures change, so caches refresh */
 const pad2 = n => String(n).padStart(2, "0");
 const swash = s => `<span class="sw">${esc(s[0])}</span>${esc(s.slice(1))}`;
 
