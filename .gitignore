@@ -1,0 +1,9 @@
+# Secrets and local Vercel link (never commit)
+.env*
+.vercel/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp

@@ -1,0 +1,51 @@
+/*
+ * Crossword: motion tokens and the global focus rule.
+ * The DESIGN.md format has no motion schema, so these live here.
+ * Personality: unhurried and attentive. One ceremony (the envelope); everything else is service.
+ */
+:root {
+  --dur-instant: 100ms; /* press */
+  --dur-fast: 150ms; /* colour/opacity hover, exits */
+  --dur-base: 200ms; /* button feedback, focus */
+  --dur-moderate: 300ms; /* tabs, accordion, menus */
+  --dur-slow: 500ms; /* carousel, panel enter */
+  --dur-ambient: 6000ms; /* auto-advance dwell (Insights, Lifecycle, Sell triggers) */
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); /* enters and UI transitions */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* moves between two rests */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1); /* exits: faster and plainer than enters */
+
+  --distance-sm: 4px; /* dropdown, toast */
+  --distance-md: 8px; /* hover lift */
+  --distance-lg: 24px; /* section reveal */
+}
+
+/* Visible keyboard focus everywhere: maroon on light grounds, gold on dark. */
+:where(a, button, [role="tab"], [tabindex]:not([tabindex="-1"]), input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-maroon, #7d0034);
+  outline-offset: 2px;
+}
+:where(.on-dark, [data-ground="dark"]) :focus-visible {
+  outline-color: var(--color-gold, #e0be60);
+}
+
+/* Press feedback for StampButton and text links. */
+@media (hover: hover) and (pointer: fine) {
+  .stamp-button:active {
+    transform: translateY(1px);
+    filter: brightness(0.95);
+    transition: transform var(--dur-instant) var(--ease-out), filter var(--dur-instant) var(--ease-out);
+  }
+}
+
+/* Reduced motion keeps colour and opacity changes and drops movement. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --distance-sm: 0px;
+    --distance-md: 0px;
+    --distance-lg: 0px;
+  }
+  .stamp-button:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/format.json",
+  "$description": "Crossword (Crossword, Inc., a CometChat product) is an AI shopper assistant presented as \"the concierge desk for your brand\". The visual language borrows from a grand hotel's front desk: a service-bell mark, cream paper, maroon and gold, jewel-toned damask panels, stamps, wax seals, and swash-capital serif headlines. Guardrail: it must never read as a generic AI chatbot or SaaS dashboard, nor as a costume or Victorian pastiche.",
+  "color": {
+    "$type": "color",
+    "primary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.49,
+          0,
+          0.204
+        ],
+        "hex": "#7d0034"
+      }
+    },
+    "on-primary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.969,
+          0.784,
+          0.286
+        ],
+        "hex": "#f7c849"
+      }
+    },
+    "secondary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.424,
+          0.137,
+          0.196
+        ],
+        "hex": "#6c2332"
+      }
+    },
+    "on-secondary": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878,
+          0.745,
+          0.376
+        ],
+        "hex": "#e0be60"
+      }
+    },
+    "trim": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.878,
+          0.745,
+          0.376
+        ],
+        "hex": "#e0be60"
+      }
+    },
+    "trim-bright": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.969,
+          0.784,
+          0.286
+        ],
+        "hex": "#f7c849"
+      }
+    },
+    "neutral": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.976,
+          0.918
+        ],
+        "hex": "#fff9ea"
+      }
+    },
+    "surface": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.976,
+          0.918
+        ],
+        "hex": "#fff9ea"
+      }
+    },
+    "surface-sand": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.953,
+          0.914,
+          0.831
+        ],
+        "hex": "#f3e9d4"
+      }
+    },
+    "surface-parchment": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.98,
+          0.929,
+          0.831
+        ],
+        "hex": "#faedd4"
+      }
+    },
+    "surface-linen": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.937,
+          0.914,
+          0.859
+        ],
+        "hex": "#efe9db"
+      }
+    },
+    "surface-bone": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.91,
+          0.871,
+          0.757
+        ],
+        "hex": "#e8dec1"
+      }
+    },
+    "surface-forest": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.2,
+          0.102
+        ],
+        "hex": "#00331a"
+      }
+    },
+    "surface-forest-deep": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.161,
+          0.086
+        ],
+        "hex": "#002916"
+      }
+    },
+    "surface-forest-light": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0.298,
+          0.153
+        ],
+        "hex": "#004c27"
+      }
+    },
+    "surface-aubergine": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.275,
+          0.129,
+          0.376
+        ],
+        "hex": "#462160"
+      }
+    },
+    "surface-night": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.055,
+          0.02,
+          0.004
+        ],
+        "hex": "#0e0501"
+      }
+    },
+    "on-surface": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.078,
+          0.078,
+          0.078
+        ],
+        "hex": "#141414"
+      }
+    },
+    "on-surface-soft": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.2,
+          0.196,
+          0.184
+        ],
+        "hex": "#33322f"
+      }
+    },
+    "on-surface-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.4,
+          0.392,
+          0.369
+        ],
+        "hex": "#66645e"
+      }
+    },
+    "on-surface-label": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.463,
+          0.4,
+          0.251
+        ],
+        "hex": "#766640"
+      }
+    },
+    "on-dark": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.875,
+          0.89,
+          0.824
+        ],
+        "hex": "#dfe3d2"
+      }
+    },
+    "on-dark-muted": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.525,
+          0.616,
+          0.533
+        ],
+        "hex": "#869d88"
+      }
+    },
+    "on-night": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.976,
+          0.918
+        ],
+        "hex": "#fff9ea"
+      }
+    },
+    "line": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.784,
+          0.765,
+          0.722
+        ],
+        "hex": "#c8c3b8"
+      }
+    },
+    "line-rail": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.824,
+          0.796,
+          0.729
+        ],
+        "hex": "#d2cbba"
+      }
+    },
+    "line-engraved": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.718,
+          0.682,
+          0.604
+        ],
+        "hex": "#b7ae9a"
+      }
+    },
+    "line-mockup": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.812,
+          0.722,
+          0.733
+        ],
+        "hex": "#cfb8bb"
+      }
+    },
+    "accent-amber": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.714,
+          0.341
+        ],
+        "hex": "#ffb657"
+      }
+    },
+    "success": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.184,
+          0.42,
+          0.247
+        ],
+        "hex": "#2f6b3f"
+      }
+    },
+    "warning": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.541,
+          0.353,
+          0.078
+        ],
+        "hex": "#8a5a14"
+      }
+    },
+    "error": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.608,
+          0.11,
+          0.11
+        ],
+        "hex": "#9b1c1c"
+      }
+    },
+    "info": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.275,
+          0.129,
+          0.376
+        ],
+        "hex": "#462160"
+      }
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "unit": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "xs": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      }
+    },
+    "sm": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      }
+    },
+    "2xl": {
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      }
+    },
+    "3xl": {
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      }
+    },
+    "section-gap": {
+      "$value": {
+        "value": 80,
+        "unit": "px"
+      }
+    },
+    "section-pad": {
+      "$value": {
+        "value": 120,
+        "unit": "px"
+      }
+    },
+    "page-pad": {
+      "$value": {
+        "value": 80,
+        "unit": "px"
+      }
+    },
+    "frame-inset": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "container-max": {
+      "$value": {
+        "value": 1280,
+        "unit": "px"
+      }
+    },
+    "nav-height": {
+      "$value": {
+        "value": 72,
+        "unit": "px"
+      }
+    }
+  },
+  "rounded": {
+    "$type": "dimension",
+    "none": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "mockup": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    },
+    "full": {
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 70,
+          "unit": "px"
+        },
+        "fontWeight": 200,
+        "letterSpacing": {
+          "value": -0.05,
+          "unit": "em"
+        }
+      }
+    },
+    "headline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 60,
+          "unit": "px"
+        },
+        "fontWeight": 200,
+        "letterSpacing": {
+          "value": -0.05,
+          "unit": "em"
+        }
+      }
+    },
+    "swash": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Parisienne",
+        "fontSize": {
+          "value": 82,
+          "unit": "px"
+        },
+        "fontWeight": 400
+      }
+    },
+    "h4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 40,
+          "unit": "px"
+        },
+        "fontWeight": 300,
+        "letterSpacing": {
+          "value": -0.04,
+          "unit": "em"
+        }
+      }
+    },
+    "h5": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 32,
+          "unit": "px"
+        },
+        "fontWeight": 300,
+        "letterSpacing": {
+          "value": -0.04,
+          "unit": "em"
+        }
+      }
+    },
+    "h6": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 28,
+          "unit": "px"
+        },
+        "fontWeight": 300,
+        "letterSpacing": {
+          "value": -0.03,
+          "unit": "em"
+        }
+      }
+    },
+    "title-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 20,
+          "unit": "px"
+        },
+        "fontWeight": 400,
+        "letterSpacing": {
+          "value": -0.04,
+          "unit": "em"
+        }
+      }
+    },
+    "body-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Geist",
+        "fontSize": {
+          "value": 24,
+          "unit": "px"
+        },
+        "fontWeight": 300,
+        "letterSpacing": {
+          "value": -0.02,
+          "unit": "em"
+        }
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Geist",
+        "fontSize": {
+          "value": 16,
+          "unit": "px"
+        },
+        "fontWeight": 400,
+        "letterSpacing": {
+          "value": -0.02,
+          "unit": "em"
+        }
+      }
+    },
+    "body-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Geist",
+        "fontSize": {
+          "value": 14,
+          "unit": "px"
+        },
+        "fontWeight": 400,
+        "letterSpacing": {
+          "value": -0.02,
+          "unit": "em"
+        }
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Geist",
+        "fontSize": {
+          "value": 12,
+          "unit": "px"
+        },
+        "fontWeight": 400,
+        "letterSpacing": {
+          "value": -0.03,
+          "unit": "em"
+        }
+      }
+    },
+    "ui-serif": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Crimson Pro",
+        "fontSize": {
+          "value": 16,
+          "unit": "px"
+        },
+        "fontWeight": 500,
+        "letterSpacing": {
+          "value": -0.03,
+          "unit": "em"
+        }
+      }
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Open Sans",
+        "fontSize": {
+          "value": 12,
+          "unit": "px"
+        },
+        "fontWeight": 600,
+        "letterSpacing": {
+          "value": 0.12,
+          "unit": "em"
+        }
+      }
+    }
+  }
+}

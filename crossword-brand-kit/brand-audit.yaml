@@ -1,0 +1,68 @@
+# brand-audit.yaml: the input contract and provenance record for this audit.
+# Skill: brand-operating-doc. Run date: 2026-10-12. Prepared by PixelUp Design.
+
+brand:
+  name: "Crossword"
+  legal_entity: "Crossword, Inc. — A CometChat Product"   # from site footer legal line
+  one_line: "Crossword is the concierge desk for your brand: an AI shopper assistant that remembers, recommends, resolves, and reports, all within your guardrails."
+  # INFERRED from the work, not supplied. Needs client confirmation (open decision D1).
+  positioning_guardrail: "Never a generic AI chatbot or SaaS dashboard, and never a costume (wedding-invitation or Victorian pastiche): a modern service brand that uses hospitality craft as proof of care."
+
+sources:
+  repo:
+    location: "https://github.com/monesh-pixelup/Crossword"
+    commit: "e2c8dc0 (2026-10-09, 'added new sell page')"
+    stack: next-tailwind          # Next 16.4, React 19.3, Tailwind v4, GSAP 3.15
+    design_eng_skill: emil        # none shipped in repo; the skill's motion lens was used
+    scanned: [app, components, modules, lib]
+  figma:
+    - file_key: "TiAeD9ICNjjC8N3zoUJExk"
+      holds:
+        - "Brand Guidelines 🟡 › Hero Tests (2270:21063): the FINAL designs. A 2270:23798, B 2270:27058, Previous 2270:21064, C 2270:30362, Hero B 2270:30944, human handoff 2270:32217"
+        - "Excluded as extras: v0.0.1 (2270:32597) and the Sell wireframe (2270:19055), elsewhere in Design Language (2270:34903)"
+        - "Logo All Variants (2270:31448): lockups, icons, framed icons, wax seals, postage stamps"
+        - "Replay Brand Guidelines (2269:680): the structure template (31 slides, 6 chapters)"
+        - "OUTPUT: Crossword Brand Guidelines (2280:186): 33 slides built in this run"
+      styles_found: "1 paint style (ILL/Paint/Shell/Radial), 0 text styles, 2 illustration-only variable collections; no brand variables"
+  brief: []                       # none supplied; intent read from shipped copy and Figma copy
+  current_site: "staging repo above (no public URL supplied)"
+
+logo:
+  master_svg: "logo/master/crossword-lockup.svg"
+  master_figma_node: "2270:31450"   # inner content of Crossword_Lockup_Black_TransparentBG (2270:31449)
+  mark_figma_node: "2270:31451"
+  mark_path_index: 0
+  measured:
+    mark: "162.91 × 113.67 master units (1.43 : 1)"
+    wordmark_height: 116.7
+    gap_mark_to_wordmark: "46.4 (0.4 × mark height)"
+    lockup_width: "836.4 (5.13 × mark width = 7.35 × mark height)"
+  grounds:
+    - { name: cream,     bg: "#FFF9EA", fg: "#141414" }
+    - { name: maroon,    bg: "#7D0034", fg: "#E0BE60" }
+    - { name: forest,    bg: "#00331A", fg: "#E0BE60" }
+    - { name: aubergine, bg: "#462160", fg: "#E0BE60" }
+    - { name: ink,       bg: "#141414", fg: "#FFF9EA" }
+
+output:
+  dir: ./crossword-brand-kit
+  deliverables: [brand_md, design_md, tokens, logo_kit, textures, patterns, previews, zip, figma_guidelines]
+
+tooling:
+  python: "3.12.10 (venv: svgelements, pillow, numpy, resvg-py; cairosvg replaced by a resvg-backed shim because libcairo is unavailable on Windows)"
+  node: "24.20.0 (@google/design.md via npx)"
+  lint: "0 errors, 0 warnings (tokens/lint-report.json)"
+
+locked:
+  - "Bell mark and Crimson Pro wordmark (Figma Logo All Variants)"
+  - "Palette anchors: cream #fff9ea, maroon #7d0034, wine #6c2332, gold #e0be60 (declared in app/globals.css as 'from Figma')"
+  - "Type: Crimson Pro + Parisienne swash + Geist (lib/fonts.ts), all SIL OFL"
+  - "Webflow-derived breakpoints 480 / 768 / 992"
+
+open_questions:
+  - "D1 Confirm the positioning guardrail above."
+  - "D2 Is forest green permanent livery, or only for footer/Trust?"
+  - "D3 Should the header show the full lockup instead of the framed mark alone?"
+  - "D4 Which hero ships: light (A, B, C) or dark photographic (Hero B)? Previous is the earlier dark version."
+  - "D5 Retire Tangerine entirely, or keep it for numerals and signatures?"
+  - "D6 Sign off placeholder stats (300+ brands, 120+ countries, 28% / 12.3% / 76%), testimonials and blog copy."
